@@ -1,0 +1,20 @@
+pipeline {
+  agent any
+    stages {
+    stage("commit") {
+      steps {
+        sh 'echo "commit..."'
+        }
+      }
+      stage('test'){
+      steps {
+      sh 'echo "testing application"'
+       }
+     }
+     stage('deploy'){
+     stage {
+     sh 'echo"deploy application"'
+     }
+    }
+   }
+  }
